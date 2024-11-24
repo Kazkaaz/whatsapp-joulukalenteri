@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joulukalenteri</title>
+    <style>
+        body {
+            background-image: url('https://cdn.pixabay.com/photo/2022/11/07/17/41/christmas-trees-7576912_640.jpg');
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffcccc;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 3em;
+            color: #b30000;
+        }
+        p {
+            font-size: 1.2em;
+            color: #800000;
+        }
+        button {
+            background-color: #b30000;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #800000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Joulukalenteri</h1>
+        <p>Ei luukkua saatavilla tälle päivälle...</p>
+    </div>
+    <script>
+        const today = new Date();
+        const day = today.getDate();
+        const month = today.getMonth() + 1; // Tammikuu on 0, joten lisätään 1
+
+        if (month === 12 && day >= 1 && day <= 24) {
+            const urls = {
+                1: 'https://areena.yle.fi/1-67710893?utm_medium=social&utm_campaign=areena-web-share&utm_source=copy-link-share',
+                2: 'https://youtube.com/shorts/qP7NquC7Ke0?si=omnt2w0oXKUnbHZA',
+                3: './src/luukut/luukku3.png',
+                4: 'https://youtu.be/uyxjl8yppuk?si=p5S-AVtWyd8844xA',
+                5: './src/luukut/luukku5.png',
+                6: './src/luukut/luukku6.png',
+                7: 'https://hikipedia.info/wiki/Joulu',
+                8: './src/luukut/luukku8.png',
+                9: './src/luukut/luukku9.png',
+                10: './src/luukut/luukku10.png',
+                11: 'https://youtube.com/shorts/i0NJU6H3AJM?si=uUwHgyJ0n0fPUhQb',
+                12: 'https://youtu.be/Ai2e2SViX8M?si=zuW2LcyScgyoLrSl&t=12',
+                13: 'https://youtu.be/vViNTa_XmO4?si=_HRBlzc3AQP1Zj76',
+                14: 'https://youtube.com/shorts/jHvwUH637fg?si=WPXk5YWPXTsW-YOK',
+                15: 'https://areena.yle.fi/1-64673574',
+                16: './src/luukut/luukku16.png',
+                17: 'https://youtu.be/ClzN2GTJ5lg?si=e4q7KKzopBR53twy',
+                18: 'https://youtube.com/shorts/Pk18Vmq6hbY?si=oA-NxLPrfiGaadR2',
+                19: './src/luukut/luukku19.png',
+                20: './src/luukut/luukku20.jpg',
+                21: './src/luukut/luukku21.jpg',
+                22: './src/luukut/luukku22.png',
+                23: './src/luukut/luukku23.jpg',
+                24: './src/luukut/luukku24.png'
+            };
+
+            if (urls[day]) {
+                window.location.href = urls[day];
+            }
+        }
+    </script>
+</body>
+</html>
